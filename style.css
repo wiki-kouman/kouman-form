@@ -72,3 +72,61 @@ form input{
     border-radius: 10px;
     border: 0;
 }
+.others_links{
+    /* display: flex; */
+}
+.all_links{
+    display: flex;
+}
+.icone a{
+    text-decoration: none;
+}
+.icone a:hover{
+    text-decoration: underline;
+}
+.icone-one{
+    color: white;
+    margin: 5px;
+    background-color: whitesmoke;
+    justify-content: left;
+}
+.icone-one i{
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    width: 20%;
+}
+.icone-two{
+    color: white;
+    margin: 5px;
+    background-color: whitesmoke;
+}
+.icone-two i{
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+}
+.icone-three{
+    color: white;
+    margin: 5px;
+    background-color: whitesmoke;
+}
+.icone-three i{
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    width: 25%;
+}
+.end-form{
+    margin-top: 15px;
+    border-bottom: 2px solid whitesmoke;
+    width: 45%;
+    padding-bottom: 3px;
+}
+.end-form h5{
+   font-size: 1rem;
+}
