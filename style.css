@@ -1,153 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Kumbh+Sans:wght@400;700&family=Lato&family=Lexend+Deca:wght@400;500&family=Montserrat:wght@700&family=Mukta:wght@300;400&family=Noto+Sans:ital@0;1&family=Oleo+Script+Swash+Caps&display=swap');
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Kumbh+Sans:wght@400;700&family=Lato&family=Lexend+Deca:wght@400;500&family=Montserrat:wght@700&family=Mukta:wght@300;400&family=Oleo+Script+Swash+Caps&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-body{
-    background-color: #152733;
-    /* background-image: url('image/image_de_fond.png');
-    background-repeat: no-repeat; */
-    font-family: 'Noto Sans', sans-serif;
+body {
+  background-color: #003153;
+  font-family: "Lato", sans-serif;
 }
-.all_body{
-    height: 100vh;
-   
-   padding: 5%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  
+.all_body {
+  height: 100vh;
+
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.bodyy{
-  
-    width: 600px;
-    position: relative;
+section {
+  width: 100%;
+  position: relative;
 }
-.logo_head{
-   text-align: center;
-   padding-bottom: 115px;
+.logo_head {
+  text-align: center;
+  padding-bottom: 115px;
 }
-#logo_entreprise{
-   width: 8em;
+#logo_entreprise {
+  width: 8em;
 }
 
-form{
-    width: 65%;
-    height: 480px;
-   
-    background-color: #fff;
-    color: #000;
-    border-radius: 10px;
-    margin-left: 75px;
-    padding: 15px;
-    position: absolute;
-    top: 205px;
+header {
+  display: flex;
+  flex-direction: column;
 }
-form h1{
-    padding-bottom: 10px;
-    font-weight: bold;
-}
-form p{
-    padding-bottom: 25px;
-}
-form input{
-    padding: 12px;
-    width: 100%;
-    margin-bottom: 10px;
-    background-color: whitesmoke;
-   border: 1px solid lightgray;
-    border-radius: 5px;  
+header img {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.input_text:hover{
-    border: 2px solid blue;
+form {
+  width: 450px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.input_password:hover{
-    border: 2px solid blue;
+form h1 {
+  padding-bottom: 10px;
+  font-weight: bold;
 }
-
-.button{
-    margin-top: 10px;
-    padding: 08px;
-    margin-bottom: 35px;
-    margin-right: 10px;
+form p {
+  padding-bottom: 25px;
 }
-.button_1{
-    background-color: #0093ff;
-    color: white;
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: 0;
-    cursor: pointer;
+form input {
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 5px;
 }
-.button_1:hover{
-   box-shadow: 0 3px 2px #003153;
+.button {
+  margin-top: 10px;
+  padding: 08px;
+  margin-bottom: 35px;
+  margin-right: 10px;
 }
-.others_links{
-    /* display: flex; */
+.button_1 {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 0;
 }
-.all_links{
-    display: flex;
+.others_links {
+  /* display: flex; */
 }
-.icone a{
-    text-decoration: none;
+.all_links {
+  display: flex;
 }
-.icone a:hover{
-    text-decoration: underline;
+.icon{
+  background-color: #F7F7F7;
+  border-radius: 5px;
 }
-.icone-one{
-    color: white;
-    margin: 5px;
-    background-color: whitesmoke;
-    justify-content: left;
+.icone a {
+  text-decoration: none;
 }
-.icone-one i{
-    padding: 5px;
-    background-color: blue;
-    color: white;
-    border-radius: 10px;
-    width: 20%;
+.icone a:hover {
+  text-decoration: none;
 }
-.icone-two{
-    color: white;
-    margin: 5px;
-    background-color: whitesmoke;
+.icone-one {
+  color: white;
+  margin: 5px;
+  background-color: whitesmoke;
+  justify-content: left;
 }
-.icone-two i{
-    padding: 5px;
-    background-color: red;
-    color: white;
-    border-radius: 10px;
-    width: 30%;
+.icone-two {
+  color: white;
+  margin: 5px;
+  background-color: whitesmoke;
 }
-.icone-three{
-    color: white;
-    margin: 5px;
-    background-color: whitesmoke;
+.icone-two i {
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  width: 30%;
 }
-.icone-three i{
-    padding: 5px;
-    background-color: blue;
-    color: white;
-    border-radius: 10px;
-    width: 25%;
+.icone-three {
+  color: white;
+  margin: 5px;
+  background-color: whitesmoke;
 }
-.password{
-    text-decoration: none;
+.icone-three i {
+  padding: 5px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  width: 25%;
 }
-.password:hover{
-    text-decoration: underline;
+.end-form {
+  margin-top: 15px;
+  border-bottom: 2px solid whitesmoke;
+  width: 45%;
+  padding-bottom: 3px;
 }
-.end-form{
-    margin-top: 15px;
-    border-bottom: 2px solid whitesmoke;
-    width: 42%;
-    padding-bottom: 3px;
-    transition: 0.5s;
-}
-.end-form:hover{
-   border-bottom: 2px solid #0093ff;
+.end-form h5 {
+  font-size: 1rem;
 }
 .end-form a{
    font-size: 0.9rem;
