@@ -5,7 +5,7 @@
   margin: 0;
 }
 body {
-  background-color: #003153;
+  background-color: #152733;
   font-family: "Lato", sans-serif;
 }
 .all_body {
@@ -70,18 +70,39 @@ form input {
   margin-right: 10px;
 }
 .button_1 {
-  background-color: blue;
+  background-color: #0093ff;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 10px;
   border: 0;
 }
-.others_links {
-  /* display: flex; */
+.button_1:hover {
+ box-shadow: 2px 2px 2px #87CEEB;
 }
+/* .others_links{
+    border: 3px solid red;
+} */
+.forget_link{
+     text-decoration: none;
+     color: #000;
+     padding-bottom: 1px;
+}
+.forget_link:hover{
+    
+    border-bottom: 1px solid black;
+     
+}
+
 .all_links {
   display: flex;
 }
+.all_links a {
+    text-decoration: none;
+    margin-right: 8px;
+}
+/* .all_links i{
+   font-size: 13px;
+} */
 .icon{
   background-color: #F7F7F7;
   border-radius: 5px;
@@ -108,7 +129,7 @@ form input {
   background-color: red;
   color: white;
   border-radius: 10px;
-  width: 30%;
+  font-size: 8px;
 }
 .icone-three {
   color: white;
@@ -120,14 +141,30 @@ form input {
   background-color: blue;
   color: white;
   border-radius: 10px;
-  width: 25%;
+ font-size: 10px;
 }
 .end-form {
   margin-top: 15px;
   border-bottom: 2px solid whitesmoke;
-  width: 45%;
+  width: 35%;
   padding-bottom: 3px;
 }
 .end-form h5 {
   font-size: 1rem;
+}
+.end-form a{
+   font-size: 0.9rem;
+   cursor: pointer;
+}
+.password{
+    color: #000;
+    font-size: .8rem;
+}
+.register_end_form{
+    width: 50%;
+    text-decoration: none;
+    font-weight: bold;
+}
+.register_end_form:hover{
+    border-bottom: 2px solid blue;
 }
