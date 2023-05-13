@@ -178,3 +178,32 @@ form input:hover {
 .register_end_form:hover{
     border-bottom: 2px solid blue;
 }
+
+/*  Responsive du site internet */ 
+
+@media (max-width: 420px) {
+  /* styles à appliquer pour les écrans d'une largeur inférieure à 815px */
+    header{
+        width: 100%;
+  }
+  form{
+    width: 100%;
+  }
+
+  .all_links{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  img[title="image de fond"] {
+ visibility: hidden;
+   
+  }
+  
+}
+@media (max-width: 270px) {
+  /* styles à appliquer pour les écrans d'une largeur inférieure à 815px */
+ #logo_entreprise{
+  margin-bottom: 95%;
+ }
+}
