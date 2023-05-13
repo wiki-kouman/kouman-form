@@ -182,7 +182,7 @@ form input:hover {
 /*  Responsive du site internet */ 
 
 @media (max-width: 420px) {
-  /* styles à appliquer pour les écrans d'une largeur inférieure à 815px */
+  /* styles à appliquer pour les écrans d'une largeur inférieure à 420px */
     header{
         width: 100%;
   }
@@ -202,7 +202,7 @@ form input:hover {
   
 }
 @media (max-width: 270px) {
-  /* styles à appliquer pour les écrans d'une largeur inférieure à 815px */
+  /* styles à appliquer pour les écrans d'une largeur inférieure à 270px */
  #logo_entreprise{
   margin-bottom: 95%;
  }
