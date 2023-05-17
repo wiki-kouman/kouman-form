@@ -38,7 +38,7 @@ header img {
 }
 
 form {
-  width: 450px;
+  width: 400px;
   background-color: #fff;
   color: #000;
   border-radius: 10px;
@@ -60,8 +60,13 @@ form input {
   width: 100%;
   margin-bottom: 10px;
   background-color: whitesmoke;
-  border: none;
+  /* border: none; */
   border-radius: 5px;
+  border: 2px solid gray;
+
+}
+form input:hover {
+  border: 2px solid #007bff;
 }
 .button {
   margin-top: 10px;
@@ -100,16 +105,21 @@ form input {
     text-decoration: none;
     margin-right: 8px;
 }
+.all_links a:hover {
+    text-decoration: underline;
+    
+}
 /* .all_links i{
    font-size: 13px;
 } */
 .icon{
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border-radius: 5px;
 }
 .icone a {
   text-decoration: none;
 }
+
 .icone a:hover {
   text-decoration: none;
 }
@@ -146,7 +156,7 @@ form input {
 .end-form {
   margin-top: 15px;
   border-bottom: 2px solid whitesmoke;
-  width: 35%;
+  width: 45%;
   padding-bottom: 3px;
 }
 .end-form h5 {
@@ -167,4 +177,33 @@ form input {
 }
 .register_end_form:hover{
     border-bottom: 2px solid blue;
+}
+
+/*  Responsive du site internet */ 
+
+@media (max-width: 420px) {
+  /* styles à appliquer pour les écrans d'une largeur inférieure à 420px */
+    header{
+        width: 100%;
+  }
+  form{
+    width: 100%;
+  }
+
+  .all_links{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  img[title="image de fond"] {
+ visibility: hidden;
+   
+  }
+  
+}
+@media (max-width: 270px) {
+  /* styles à appliquer pour les écrans d'une largeur inférieure à 270px */
+ #logo_entreprise{
+  margin-bottom: 95%;
+ }
 }
