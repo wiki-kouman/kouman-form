@@ -35,9 +35,24 @@ header {
 header img {
   margin-right: auto;
   margin-left: auto;
+  max-width: 100%;
+
 }
 
-form {
+form[action="aa"] {
+  width: 400px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 30px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+form [action="bb"] {
   width: 400px;
   background-color: #fff;
   color: #000;
@@ -48,6 +63,7 @@ form {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 form h1 {
   padding-bottom: 10px;
   font-weight: bold;
@@ -183,9 +199,15 @@ form input:hover {
 
 @media (max-width: 420px) {
   /* styles à appliquer pour les écrans d'une largeur inférieure à 420px */
-    header{
-        width: 100%;
-  }
+   section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   }
+    /* header{
+       
+  } */
   form{
     width: 100%;
   }
@@ -206,4 +228,70 @@ form input:hover {
  #logo_entreprise{
   margin-bottom: 95%;
  }
+}
+
+
+
+
+/*  commentaire de l'ajout du formulaire */
+
+/* Style the form */
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+#prevBtn, #nextBtn{
+  padding: 10px 30px;
+  font-weight: bold;
+  background-color: #0093ff;
+  border-radius: 10px;
+  border: none;
+}
+#prevBtn{
+  margin-bottom: 15px;
 }
