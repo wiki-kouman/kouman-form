@@ -39,7 +39,20 @@ header img {
 
 }
 
-form {
+form[action="aa"] {
+  width: 400px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 30px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+form [action="bb"] {
   width: 400px;
   background-color: #fff;
   color: #000;
@@ -50,6 +63,7 @@ form {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 form h1 {
   padding-bottom: 10px;
   font-weight: bold;
