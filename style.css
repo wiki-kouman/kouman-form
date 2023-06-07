@@ -295,3 +295,20 @@ input.invalid {
 #prevBtn{
   margin-bottom: 15px;
 }
+ 
+/* responsivité du site */ 
+
+@media (max-width: 400px){
+  form[action="aa"] {
+    width: 100%;
+    margin-top: 15px;
+  }
+  #logo_entreprise{
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 310px){
+  #logo_entreprise{
+  visibility: hidden;
+  }
+}
