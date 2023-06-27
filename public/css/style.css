@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Inter:wght@200;300;400;600&family=Kumbh+Sans:wght@400;700&family=Lato&family=Lexend+Deca:wght@400;500&family=Montserrat:wght@700&family=Mukta:wght@300;400&family=Noto+Sans:ital@0;1&family=Oleo+Script+Swash+Caps&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-repeat: no-repeat;
+    background-image: url("../images/image_de_fond.png");
+    background-color: #494541;
+    background-position: center center;   
+    width: 100%;
+    height: 100vh;  
+    font-family: 'Inter', sans-serif;           
+} 
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+#all_forms{
+   height: 70vh;
+   width: 600px;
+   background-color: white;
+   border-radius: 10px;
+   margin-top: 9%;
+   padding: 20px;
+   position: relative;
+}
+#all_forms h3{
+    color: #af600e;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+#all_forms p{
+ margin-bottom: 15px;
+}
+.all_round{
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
+
+.round{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100px;
+    border-radius: 50%;
+    height: 100px; 
+    background-color: #af600e;
+    justify-content: center;
+    align-items: center;
+}
+.round p{
+    color: white;
+}
+.first_number{
+    border-bottom: 3px solid white;
+    width: 70px;
+    text-align: center;
+    padding-bottom: 8px;
+} 
+form{
+    display: flex;
+    flex-direction: column;  
+}
+input{
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: rgba(73, 69, 65, 0.8);
+}
+input::placeholder {
+    color: white; 
+}
+.btn_all-end{
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-end{
+    padding: 15px 45px;
+    color: white;
+    background-color: #af600e;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* Lien css du deuxième fichier html */
+
+
+.all_body-top,.all_body-bottom{
+    background-color: rgba(73, 69, 65, 0.8);
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+.all_body-bottom{
+    margin-top: 20px;
+}
+.footer_all-end{
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+.one, .two{
+   background-color: rgba(73, 69, 65, 0.8);;
+}
+
+/* Lien css du troisième fichier html */
+
+.center_body{
+    background-color: #af600e;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+/* Masquer la case à cocher par défaut */
+input[type="checkbox"] {
+  display: flex;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+/* Style de la case à cocher personnalisé */
+
+
+/* Style de la case à cocher cochée */
+
+input[type="checkbox"]:checked + .checkmark {
+  background-color: #af600e;
+}
+
+/* Style du texte de la case à cocher */
+
+label {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.bottom_checkbox{
+  width: 100%;
+  background: rgba(73, 69, 65, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+}
+
+.footer_of_btn{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.left-btn,.right-btn{
+    padding: 10px 45px;
+    color: white;
+    background-color: #af600e;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.left-btn{
+    background-color: rgba(73, 69, 65, 0.8);
+}
