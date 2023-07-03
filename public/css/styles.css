@@ -51,6 +51,24 @@ img.main-bg{
   line-height: 25px;
   margin-bottom: 15px;
 }
+.round_of_number{
+  padding: 2px 3px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color:#AF600E;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: white; 
+}
+.five{
+  border-bottom: blue;
+  padding-bottom: 5px;
+  border-top: 2px solid white;
+}
 
 input {
   padding: 18px;
