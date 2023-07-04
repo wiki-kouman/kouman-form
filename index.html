@@ -10,14 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/public/css/styles.css" />
+    <link rel="stylesheet" href="public/css/styles.css" />
     <title>Formulaire de Kouman entreprise</title>
   </head>
   <body>
     <div class="main-container">
       <form id="regForm" action="#">
-        <h1>Kouman Kwadebe</h1>
-        <p>Remplissez correctement tous les champs.<br />Veuillez choisir un package</p>  
+        <div class="count_container">
+          <div id="current_counter">1</div>
+          <div id="counter_total">5</div>
+        </div>
+
+        <h1 id="form_title">Kouman Kwadebe</h1>
+        <p id="form_subtitle">
+          Remplissez correctement tous les champs.<br />Veuillez choisir un
+          package
+        </p>
         <!-- One "tab" for each step in the form: -->
         <div class="tab">
           <p>
@@ -42,77 +50,99 @@
             />
           </p>
         </div>
+
+        <!-- Slider two-->
+
         <div class="tab">
-          <p>
-            <div class="pack pack-one">
-              <h2>PACKS DE RESTAURATIONS À DOMICILE</h2>
-              <p>Nous allons mettre un chef cuisinier à votre disposition pour faire la cuisine chez vous</p>
-              <div class="pack-list">
-                <label class="radio-container">4 menus pour 8 á 20 personnes (50.000 FCFA)
-                  <input type="radio" name="home_pack">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="radio-container">4 menus pour 21 á 40 personnes (80.000 FCFA)
-                  <input type="radio" name="home_pack">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="radio-container">4 menus pour 41 á 60 personnes (100.000 FCFA)
-                  <input type="radio" name="home_pack">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="radio-container">4 menus á pour 61 á 100 personnes (150.000 FCFA)
-                  <input type="radio" name="home_pack">
-                  <span class="checkmark"></span>
-                </label>
-              </div>
+          <div class="pack pack-one" onclick="packAnimation(0)">
+            <h2>PACKS DE RESTAURATIONS À DOMICILE</h2>
+            <p>
+              Nous allons mettre un chef cuisinier à votre disposition pour
+              faire la cuisine chez vous
+            </p>
+            <div class="pack-list">
+              <label class="radio-container"
+                >4 menus pour 8 á 20 personnes (50.000 FCFA)
+                <input type="radio" name="home_pack" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="radio-container"
+                >4 menus pour 21 á 40 personnes (80.000 FCFA)
+                <input type="radio" name="home_pack" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="radio-container"
+                >4 menus pour 41 á 60 personnes (100.000 FCFA)
+                <input type="radio" name="home_pack" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="radio-container"
+                >4 menus á pour 61 á 100 personnes (150.000 FCFA)
+                <input type="radio" name="home_pack" />
+                <span class="checkmark"></span>
+              </label>
             </div>
-          </p>
-          <p>
-            <div class="pack pack-two">
-              <h2>PACKS DE RESTAURATIONS  SUR COMMANDE</h2>
-              <p>Nous allons faire la cuisine dans nos locaux et vous faire livrer là où vous le désirez.</p>
-              <div class="pack-list">
-                <label class="radio-container">4 menus pour 8 á 20 personnes (60.000FCFA)
-                  <input type="radio" name="home_pack">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="radio-container">4 menus pour 21 á 40 personnes (90.000FCFA)
-                  <input type="radio" name="home_pack">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="radio-container">4 menus pour 41 á 60 personnes (110 000 FCFA)
-                  <input type="radio" name="home_pack">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="radio-container">4 menus pour 61 á 100 personnes (160 000 FCFA)
-                  <input type="radio" name="home_pack">
-                  <span class="checkmark"></span>
-                </label>
-              </div>
+          </div>
+          <div class="pack pack-two" onclick="packAnimation(1)">
+            <h2>PACKS DE RESTAURATIONS SUR COMMANDE</h2>
+            <p>
+              Nous allons faire la cuisine dans nos locaux et vous faire livrer
+              là où vous le désirez.
+            </p>
+            <div class="pack-list">
+              <label class="radio-container"
+                >4 menus pour 8 á 20 personnes (60.000FCFA)
+                <input type="radio" name="home_pack" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="radio-container"
+                >4 menus pour 21 á 40 personnes (90.000FCFA)
+                <input type="radio" name="home_pack" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="radio-container"
+                >4 menus pour 41 á 60 personnes (110 000 FCFA)
+                <input type="radio" name="home_pack" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="radio-container"
+                >4 menus pour 61 á 100 personnes (160 000 FCFA)
+                <input type="radio" name="home_pack" />
+                <span class="checkmark"></span>
+              </label>
             </div>
-          </p>
+          </div>
         </div>
+
+        <!-- Slider three-->
+
         <div class="tab">
-          <p style="text-align: center;">Bravo !!!! </p>
+          <div style="text-align: center">
+            <p>
+              Merci de nous avoir contacté!<br />Nous vous revenons très bientôt
+            </p>
+            <p style="font-size: 50px; margin-top: 15px">🥳</p>
+          </div>
         </div>
         <div style="overflow: auto">
-          <div style="display:flex; justify-content: space-between">
+          <div style="display: flex; justify-content: space-between">
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">
               Précédent
             </button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">
+            <button
+              type="button"
+              class="stepper-btn"
+              id="nextBtn"
+              onclick="nextPrev(1)"
+              style="float: right"
+            >
               Suivant
             </button>
           </div>
         </div>
-        <!-- Circles which indicates the steps of the form: -->
-        <div style="text-align: center; margin-top: 40px">
-          <span class="step"></span>
-          <span class="step"></span>
-        </div>
       </form>
-      <img class="main-bg" src="/public/images/image_de_fond.png" alt="...">
+      <img class="main-bg" src="public/images/image_de_fond.png" alt="..." />
     </div>
-    <script src="/public/js/index.js"></script>
+    <script src="public/js/index.js"></script>
   </body>
 </html>

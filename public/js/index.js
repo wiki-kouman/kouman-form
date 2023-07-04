@@ -19,9 +19,15 @@ function showTab(n) {
   if(n === x.length - 1) {
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("prevBtn").style.display = "none";
+    document.getElementsByClassName("count_container")[0].style.display = "none";
+    document.getElementById("form_title").style.textAlign = "center";
+    document.getElementById("form_subtitle").style.display = 'none';
   }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n);
+
+  let counter_total = document.getElementById("counter_total");
+  let current_counter = document.getElementById("current_counter");
+  current_counter.innerText = n +1;
+  counter_total.innerText = x.length -1;
 }
 
 function nextPrev(n) {
@@ -61,47 +67,22 @@ function validateForm() {
       valid = false;
     }
   }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
   return valid; // return the valid status
 }
 
-function packInfo() {
-  // 
-  const pack = document.getElementsByClassName('pack');
-  
-  // let x,
-  //   y,
-  //   i,
-  //   valid = true;
-  // x = document.getElementsByClassName("tab");
-  // y = x[currentTab].getElementsByTagName("input");
-  // // A loop that checks every input field in the current tab:
-  // for (i = 0; i < y.length; i++) {
-  //   // If a field is empty...
-  //   if (y[i].value == "") {
-  //     // add an "invalid" class to the field:
-  //     y[i].className += " invalid";
-  //     // and set the current valid status to false
-  //     valid = false;
-  //   }
-  // }
-  // // If the valid status is true, mark the step as finished and valid:
-  // if (valid) {
-  //   document.getElementsByClassName("step")[currentTab].className += " finish";
-  // }
-  // return valid; // return the valid status
-}
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  let i,
-    x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
+const packOne = document.querySelector(".pack-one");
+const packTwo = document.querySelector(".pack-two");
+const packs = document.getElementsByClassName("pack");
+function packAnimation(n){
+  const packs = document.getElementsByClassName("pack");
+  for (let i = 0; i < packs.length; i++){
+    if (i === n) {
+      packs[i].className += " active";
+      packs[i].querySelector("p").style.display = 'block';
+    }
+    else{
+      packs[i].classList.remove("active");
+      packs[i].querySelector("p").style.display = 'none';
+    }
   }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
 }
