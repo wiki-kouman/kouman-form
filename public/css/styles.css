@@ -32,7 +32,7 @@ body {
 }
 
 img.main-bg{
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -41,14 +41,14 @@ img.main-bg{
 
 #regForm h1 {
   color: #AF600E;
-  font-size: 36px;
+  font-size: 35px;
   margin-bottom: 13px;
 }
 
 #regForm p {
   font-size: 15px;
   font-weight: 300;
-  line-height: 25px;
+  line-height: 23px;
   margin-bottom: 15px;
 }
 
@@ -108,4 +108,104 @@ button {
 /* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #04aa6d;
+}
+
+.pack{
+  background-color: #6D6A67;
+  border-radius: 15px;
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all .3s;
+}
+.pack.active{
+  background-color: #AF600E;
+}
+.pack:hover{
+  background-color: #AF600E;
+}
+
+.pack .pack-list {
+  display: none;
+}
+
+#regForm .pack h2{
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+}
+#regForm .pack p{
+  margin-bottom: 0px;
+}
+
+/* The container */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 17px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+/* Hide the browser's default checkbox */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.radio-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
