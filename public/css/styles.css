@@ -82,11 +82,50 @@ input {
   font-weight: 300;
 }
 
+/* Slider two */
 
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
+.one-pack, .two-pack{
+  color: #f1f1f1;
+  border-radius: 10px;
+  background-color: #494541CC;
+  padding: 8px;
 }
+.two-pack{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.all-btn{
+  margin-top: 45px;
+}
+
+/* Slider three */
+
+.packs-of-menu{
+ background-color: #AF600E;
+ border-radius: 10px;
+ padding: 10px;
+ color: #fff;
+}
+label{
+ display: flex;
+}
+
+#myCheckbox {
+  /* Définir les dimensions souhaitées */
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.packs-of-resto{
+  font-weight: bold;
+  background-color:  #494541CC;
+  text-align: center;
+  border-radius: 10px;
+  margin-top:  15px;
+  padding: 6px;
+  color: #fff;
+}
+
 
 /* Hide all steps by default: */
 .tab {
