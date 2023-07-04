@@ -22,8 +22,8 @@
           <div id="counter_total">5</div>
         </div>
        
-        <h1>Kouman Kwadebe</h1>
-        <p>Remplissez correctement tous les champs.<br />Veuillez choisir un package</p>  
+        <h1 id="form_title">Kouman Kwadebe</h1>
+        <p id="form_subtitle">Remplissez correctement tous les champs.<br />Veuillez choisir un package</p>
         <!-- One "tab" for each step in the form: -->
         <div class="tab">
           <p>
@@ -53,7 +53,7 @@
 
         <div class="tab">
           <p>
-            <div class="pack pack-one">
+            <div class="pack pack-one" onclick="packAnimation(0)">
               <h2>PACKS DE RESTAURATIONS À DOMICILE</h2>
               <p>Nous allons mettre un chef cuisinier à votre disposition pour faire la cuisine chez vous</p>
               <div class="pack-list">
@@ -77,7 +77,7 @@
             </div>
           </p>
           <p>
-            <div class="pack pack-two">
+            <div class="pack pack-two" onclick="packAnimation(1)">
               <h2>PACKS DE RESTAURATIONS  SUR COMMANDE</h2>
               <p>Nous allons faire la cuisine dans nos locaux et vous faire livrer là où vous le désirez.</p>
               <div class="pack-list">
@@ -105,7 +105,10 @@
         <!-- Slider three--> 
 
         <div class="tab">
-          <p style="text-align: center;">Bravo !!!! </p>
+          <div style="text-align: center;">
+            <p>Merci de nous avoir contacté!<br/>Nous vous revenons très bientôt</p>
+            <p style="font-size: 50px; margin-top: 15px;">🥳</p>
+          </div>
         </div>
         <div style="overflow: auto">
           <div style="display:flex; justify-content: space-between">
@@ -117,11 +120,6 @@
             </button>
           </div>
         </div>
-        <!-- Circles which indicates the steps of the form: -->
-        <!-- <div style="text-align: center; margin-top: 40px">
-          <span class="step"></span>
-          <span class="step"></span>
-        </div> -->
       </form>
       <img class="main-bg" src="public/images/image_de_fond.png" alt="...">
     </div>

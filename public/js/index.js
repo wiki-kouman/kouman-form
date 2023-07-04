@@ -20,6 +20,8 @@ function showTab(n) {
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("prevBtn").style.display = "none";
     document.getElementsByClassName("count_container")[0].style.display = "none";
+    document.getElementById("form_title").style.textAlign = "center";
+    document.getElementById("form_subtitle").style.display = 'none';
   }
 
   let counter_total = document.getElementById("counter_total");
@@ -68,5 +70,19 @@ function validateForm() {
   return valid; // return the valid status
 }
 
-// Ajout d'un écouteur d'événement pour détecter les clics sur la case à cocher
-btnNext.addEventListener("click", updateCounter);
+const packOne = document.querySelector(".pack-one");
+const packTwo = document.querySelector(".pack-two");
+const packs = document.getElementsByClassName("pack");
+function packAnimation(n){
+  const packs = document.getElementsByClassName("pack");
+  for (let i = 0; i < packs.length; i++){
+    if (i === n) {
+      packs[i].className += " active";
+      packs[i].querySelector("p").style.display = 'block';
+    }
+    else{
+      packs[i].classList.remove("active");
+      packs[i].querySelector("p").style.display = 'none';
+    }
+  }
+}
