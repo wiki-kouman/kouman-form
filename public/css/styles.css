@@ -157,6 +157,8 @@ button {
   color: #ffffff;
   cursor: pointer;
   transition: all 0.2s;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .pack.active .pack-list{
   display: block;
