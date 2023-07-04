@@ -19,9 +19,13 @@ function showTab(n) {
   if(n === x.length - 1) {
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("prevBtn").style.display = "none";
+    document.getElementsByClassName("count_container")[0].style.display = "none";
   }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n);
+
+  let counter_total = document.getElementById("counter_total");
+  let current_counter = document.getElementById("current_counter");
+  current_counter.innerText = n +1;
+  counter_total.innerText = x.length -1;
 }
 
 function nextPrev(n) {
@@ -61,68 +65,7 @@ function validateForm() {
       valid = false;
     }
   }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
   return valid; // return the valid status
-}
-
-function packInfo() {
-  // 
-  const pack = document.getElementsByClassName('pack');
-  
-  // let x,
-  //   y,
-  //   i,
-  //   valid = true;
-  // x = document.getElementsByClassName("tab");
-  // y = x[currentTab].getElementsByTagName("input");
-  // // A loop that checks every input field in the current tab:
-  // for (i = 0; i < y.length; i++) {
-  //   // If a field is empty...
-  //   if (y[i].value == "") {
-  //     // add an "invalid" class to the field:
-  //     y[i].className += " invalid";
-  //     // and set the current valid status to false
-  //     valid = false;
-  //   }
-  // }
-  // // If the valid status is true, mark the step as finished and valid:
-  // if (valid) {
-  //   document.getElementsByClassName("step")[currentTab].className += " finish";
-  // }
-  // return valid; // return the valid status
-}
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  let i,
-    x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
-}
-
-//    ajout du compteur
-
-// Sélection de l'élément checkbox et du compteur
-var btnNext = document.getElementById("nextBtn");
-var counter = document.getElementById("counter");
-
-// Variable pour stocker la valeur actuelle du compteur
-var count = 0;
-
-// Fonction pour mettre à jour la valeur du compteur
-function updateCounter() {
-  if (btnNext.checked) {
-    count--;
-  } else {
-    count++;
-  }
-  counter.textContent = count;
 }
 
 // Ajout d'un écouteur d'événement pour détecter les clics sur la case à cocher
