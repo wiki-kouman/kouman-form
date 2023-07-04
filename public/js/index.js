@@ -74,3 +74,25 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
+
+//    ajout du compteur
+
+// Sélection de l'élément checkbox et du compteur
+var btnNext = document.getElementById("nextBtn");
+var counter = document.getElementById("counter");
+
+// Variable pour stocker la valeur actuelle du compteur
+var count = 0;
+
+// Fonction pour mettre à jour la valeur du compteur
+function updateCounter() {
+  if (btnNext.checked) {
+    count--;
+  } else {
+    count++;
+  }
+  counter.textContent = count;
+}
+
+// Ajout d'un écouteur d'événement pour détecter les clics sur la case à cocher
+btnNext.addEventListener("click", updateCounter);

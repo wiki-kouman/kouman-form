@@ -18,7 +18,7 @@
        
       <form id="regForm" action="#">
         <div class="round_of_number">
-          <p> 1</p>
+          <p id="counter"> 1</p>
           <p class="five">  5</p>
         </div>
        
@@ -99,11 +99,11 @@
 
           <div class="packs-of-resto">
             <p>PACKS DE RESTAURATIONS SUR COMMANDE</p>
-       </div>
-       
+          </div>
+
         </div>
-        <div class="tab">
-          <p>
+        <!-- <div class="tab">
+           <p>
             <input
               placeholder="Username..."
               oninput="this.className = ''"
@@ -117,14 +117,14 @@
               name="pword"
               type="password"
             />
-          </p>
-        </div>
+          </p> 
+        </div> -->
         <div style="overflow: auto">
            <div class="all-btn" > 
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+            <button type="button" class="stepper-btn" id="prevBtn" onclick="nextPrev(-1)">
               Précédent
             </button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)" style="float: right">
+            <button type="button" class="stepper-btn" id="nextBtn" onclick="nextPrev(1)" style="float: right">
               Suivant
             </button>
           </div>
