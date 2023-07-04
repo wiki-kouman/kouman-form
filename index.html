@@ -44,55 +44,59 @@
         </div>
         <div class="tab">
           <p>
-            <input
-              placeholder="E-mail..."
-              oninput="this.className = ''"
-              name="email"
-            />
+            <div class="pack pack-one">
+              <h2>PACKS DE RESTAURATIONS À DOMICILE</h2>
+              <p>Nous allons mettre un chef cuisinier à votre disposition pour faire la cuisine chez vous</p>
+              <div class="pack-list">
+                <label class="radio-container">4 menus pour 8 á 20 personnes (50.000 FCFA)
+                  <input type="radio" name="home_pack">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">4 menus pour 21 á 40 personnes (80.000 FCFA)
+                  <input type="radio" name="home_pack">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">4 menus pour 41 á 60 personnes (100.000 FCFA)
+                  <input type="radio" name="home_pack">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">4 menus á pour 61 á 100 personnes (150.000 FCFA)
+                  <input type="radio" name="home_pack">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
           </p>
           <p>
-            <input
-              placeholder="Phone..."
-              oninput="this.className = ''"
-              name="phone"
-            />
+            <div class="pack pack-two">
+              <h2>PACKS DE RESTAURATIONS  SUR COMMANDE</h2>
+              <p>Nous allons faire la cuisine dans nos locaux et vous faire livrer là où vous le désirez.</p>
+              <div class="pack-list">
+                <label class="radio-container">4 menus pour 8 á 20 personnes (60.000FCFA)
+                  <input type="radio" name="home_pack">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">4 menus pour 21 á 40 personnes (90.000FCFA)
+                  <input type="radio" name="home_pack">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">4 menus pour 41 á 60 personnes (110 000 FCFA)
+                  <input type="radio" name="home_pack">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio-container">4 menus pour 61 á 100 personnes (160 000 FCFA)
+                  <input type="radio" name="home_pack">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
           </p>
         </div>
         <div class="tab">
-          Birthday:
-          <p>
-            <input placeholder="dd" oninput="this.className = ''" name="dd" />
-          </p>
-          <p>
-            <input placeholder="mm" oninput="this.className = ''" name="nn" />
-          </p>
-          <p>
-            <input
-              placeholder="yyyy"
-              oninput="this.className = ''"
-              name="yyyy"
-            />
-          </p>
-        </div>
-        <div class="tab">
-          <p>
-            <input
-              placeholder="Username..."
-              oninput="this.className = ''"
-              name="uname"
-            />
-          </p>
-          <p>
-            <input
-              placeholder="Password..."
-              oninput="this.className = ''"
-              name="pword"
-              type="password"
-            />
-          </p>
+          <p style="text-align: center;">Bravo !!!! </p>
         </div>
         <div style="overflow: auto">
-          <div style="float: right">
+          <div style="display:flex; justify-content: space-between">
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">
               Précédent
             </button>
@@ -103,8 +107,6 @@
         </div>
         <!-- Circles which indicates the steps of the form: -->
         <div style="text-align: center; margin-top: 40px">
-          <span class="step"></span>
-          <span class="step"></span>
           <span class="step"></span>
           <span class="step"></span>
         </div>
