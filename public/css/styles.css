@@ -32,11 +32,10 @@ body {
 }
 
 img.main-bg {
-  max-width: 50%;
+  margin: auto;
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 5%;
 }
 
 #regForm h1 {
@@ -159,9 +158,11 @@ button {
   transition: all 0.2s;
   margin-top: 15px;
   margin-bottom: 15px;
+ 
 }
 .pack.active .pack-list{
   display: block;
+  
 }
 .pack.active,
 .pack:hover {
