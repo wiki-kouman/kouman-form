@@ -89,58 +89,46 @@ function packAnimation(n) {
   }
 }
 
-// Validation des differents formulaires
+// Validation of differents forms
 
 // form 1
 
-// Récupère la référence du champ de saisie
-var inputField = document.getElementById("monChamp");
+// Retrieves the reference of the input field
 
-// Ajoute un écouteur d'événement pour l'événement keydown
+var inputField = document.getElementById("myFields");
+
 inputField.addEventListener("keydown", function (event) {
-  // Expression régulière pour vérifier si la touche est un chiffre ou un caractère spécial
   var regex = /[0-9!@#$%^&*()µ^¨_§£+=[\]{};':"\\|,.<>/?~`-]/;
-
-  // Vérifie le code de la touche pressée et si elle est un chiffre ou un caractère spécial
+  x;
   if (regex.test(event.key)) {
-    // Annule l'événement si la touche est un chiffre ou un caractère spécial
     event.preventDefault();
-
-    // Affiche un message d'erreur
-    //   var errorMessage = document.getElementById("errorMessage");
-    //   errorMessage.innerHTML =
-    //     "Les chiffres et les caractères spéciaux ne sont pas autorisés.";
-    // } else {
-    // Efface le message d'erreur s'il y en avait un précédemment affiché
-    // var errorMessage = document.getElementById("errorMessage");
-    // errorMessage.innerHTML = "";
   }
 });
 
 // Form 2
 
-// Récupère la référence du champ de saisie
+const input = document.getElementById("myPhone");
 
-// Récupère la référence du champ de saisie
-var inputField = document.getElementById("monChampTwo");
+input.addEventListener("keydown", function (event) {
+  const key = event.key;
 
-// Ajoute un écouteur d'événement pour l'événement keydown
-inputField.addEventListener("keydown", function (event) {
-  // Expression régulière pour vérifier si la touche est une lettre ou un caractère spécial
-  var regex = /[a-zA-Z!@#$%^&*()_£*°=[\]{};':"\\|,.<>/?~`]/;
-
-  // Vérifie le code de la touche pressée et si elle est une lettre ou un caractère spécial
-  if (regex.test(event.key)) {
-    // Annule l'événement si la touche est une lettre ou un caractère spécial
+  if (
+    /^[a-zA-Z\s]+$/.test(key) === true &&
+    key !== "Delete" &&
+    key !== "Backspace"
+  ) {
     event.preventDefault();
+  }
+});
 
-    // Affiche un message d'erreur
-    var errorMessage = document.getElementById("errorMessage");
-    errorMessage.innerHTML =
-      "Les lettres et les caractères spéciaux ne sont pas autorisés.";
-  } else {
-    // Efface le message d'erreur s'il y en avait un précédemment affiché
-    var errorMessage = document.getElementById("errorMessage");
-    errorMessage.innerHTML = "";
+// Form 3
+
+const emailInput = document.getElementById("myEmail");
+
+emailInput.addEventListener("input", function (event) {
+  const value = event.target.value;
+
+  if (/[^a-zA-Z0-9\s]/.test(value)) {
+    event.target.value = value.replace(/[^a-zA-Z0-9\s.@]/g, "");
   }
 });
