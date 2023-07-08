@@ -73,9 +73,6 @@ function validateForm() {
 
 // Packs animation of Kouman
 
-const packOne = document.querySelector(".pack-one");
-const packTwo = document.querySelector(".pack-two");
-const packs = document.getElementsByClassName("pack");
 function packAnimation(n) {
   const packs = document.getElementsByClassName("pack");
   for (let i = 0; i < packs.length; i++) {
@@ -95,7 +92,7 @@ function packAnimation(n) {
 
 // Retrieves the reference of the input field
 
-var inputField = document.getElementById("myFields");
+inputField = document.getElementById("myFields");
 
 inputField.addEventListener("keydown", function (event) {
   var regex = /[0-9!@#$%^&*()µ^¨_§£+=[\]{};':"\\|,.<>/?~`-]/;
