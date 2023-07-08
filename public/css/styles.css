@@ -8,6 +8,8 @@
 
 body {
   background-color: #f1f1f1;
+  height: 100vh;
+ 
 }
 .main-container {
   background-color: #494541;
@@ -17,7 +19,7 @@ body {
 }
 
 #regForm {
-  position: absolute;
+  position: relative;
   background-color: #ffffff;
   padding: 40px;
   width: 40%;
@@ -29,14 +31,18 @@ body {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  z-index: 10;
 }
 
 img.main-bg {
-  max-width: 50%;
+  margin: auto;
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #regForm h1 {
@@ -156,12 +162,13 @@ button {
   padding: 10px;
   color: #ffffff;
   cursor: pointer;
-  transition: all 0.2s;
   margin-top: 15px;
   margin-bottom: 15px;
+ 
 }
 .pack.active .pack-list{
   display: block;
+  
 }
 .pack.active,
 .pack:hover {
@@ -171,6 +178,7 @@ button {
 .pack .pack-list {
   margin-top: 15px;
   display: none;
+ 
 }
 
 #regForm .pack h2 {
@@ -253,4 +261,12 @@ button {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/*  Form responsivity */
+
+@media (max-width: 685px) {
+  img.main-bg{
+    width: 100%;
+  }
 }

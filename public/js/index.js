@@ -16,18 +16,19 @@ function showTab(n) {
   } else {
     document.getElementById("nextBtn").innerHTML = "Suivant";
   }
-  if(n === x.length - 1) {
+  if (n === x.length - 1) {
     document.getElementById("nextBtn").style.display = "none";
     document.getElementById("prevBtn").style.display = "none";
-    document.getElementsByClassName("count_container")[0].style.display = "none";
+    document.getElementsByClassName("count_container")[0].style.display =
+      "none";
     document.getElementById("form_title").style.textAlign = "center";
-    document.getElementById("form_subtitle").style.display = 'none';
+    document.getElementById("form_subtitle").style.display = "none";
   }
 
   let counter_total = document.getElementById("counter_total");
   let current_counter = document.getElementById("current_counter");
-  current_counter.innerText = n +1;
-  counter_total.innerText = x.length -1;
+  current_counter.innerText = n + 1;
+  counter_total.innerText = x.length - 1;
 }
 
 function nextPrev(n) {
@@ -70,19 +71,61 @@ function validateForm() {
   return valid; // return the valid status
 }
 
-const packOne = document.querySelector(".pack-one");
-const packTwo = document.querySelector(".pack-two");
-const packs = document.getElementsByClassName("pack");
-function packAnimation(n){
+// Packs animation of Kouman
+
+function packAnimation(n) {
   const packs = document.getElementsByClassName("pack");
-  for (let i = 0; i < packs.length; i++){
+  for (let i = 0; i < packs.length; i++) {
     if (i === n) {
       packs[i].className += " active";
-      packs[i].querySelector("p").style.display = 'block';
-    }
-    else{
+      packs[i].querySelector("p").style.display = "block";
+    } else {
       packs[i].classList.remove("active");
-      packs[i].querySelector("p").style.display = 'none';
+      packs[i].querySelector("p").style.display = "none";
     }
   }
 }
+
+// Validation of differents forms
+
+// form 1
+
+// Retrieves the reference of the input field
+
+inputField = document.getElementById("myFields");
+
+inputField.addEventListener("keydown", function (event) {
+  var regex = /[0-9!@#$%^&*()µ^¨_§£+=[\]{};':"\\|,.<>/?~`-]/;
+  x;
+  if (regex.test(event.key)) {
+    event.preventDefault();
+  }
+});
+
+// Form 2
+
+const input = document.getElementById("myPhone");
+
+input.addEventListener("keydown", function (event) {
+  const key = event.key;
+
+  if (
+    /^[a-zA-Z\s]+$/.test(key) === true &&
+    key !== "Delete" &&
+    key !== "Backspace"
+  ) {
+    event.preventDefault();
+  }
+});
+
+// Form 3
+
+const emailInput = document.getElementById("myEmail");
+
+emailInput.addEventListener("input", function (event) {
+  const value = event.target.value;
+
+  if (/[^a-zA-Z0-9\s]/.test(value)) {
+    event.target.value = value.replace(/[^a-zA-Z0-9\s.@]/g, "");
+  }
+});
